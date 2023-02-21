@@ -46,7 +46,7 @@
 
         let employees = [
             {
-                name: 'asd',
+                name: 'Happy',
                 payments: [
                     {
                         date: '2010-02-03',
@@ -59,10 +59,59 @@
                 ]
             },
         ];
-
-
+        // console.log(cat);
         
-        console.log(cat);
+        /*
+        let sum = 5 + 5;
+        let min = 15 - 5;
+        let div = 65 / 5;
+        let mul = 6 * 5;
+        let div2 = 5 % 2;
+        console.log('sum: ', sum, 'div: ', div, 'mul: ', mul, 'div2: ', div2);
+        */
+
+        let a1 = 83;
+        // console.log(++a1);
+        // console.log(a1);
+
+        // a1 = a1 / 6;
+        // a1 /= 6;
+        // a1 += 6;
+        // a1 += 10;
+        // console.log(a1);
+
+        // a1 /= 6;
+        // console.log(typeof a1, typeof a1.toFixed(2));
+
+        let str1 = 'Price';
+        let str2 = '$';
+        let price = (a1 / 6).toFixed(2);
+        let str3 = str1 + ' ' + str2;
+        let str4 = `${str1} product: ${price} ${str2}`;
+        str4 += ' small';
+
+        let str_len = str4.length; // длина строки
+        let first_char = str4[0]; // первый симв.
+        let last_char = str4[str4.length - 1]; // послед. симв.
+        console.log(str4, str_len, first_char, last_char);
+
+        let has_str = str4.includes('product'); // вхождение в строку 
+        let index = str4.indexOf('$'); // индекс подстроки
+        let sub = str4.substr(0, index); // вырезаем из строки. начиная с 0, по index
+        let repl = str4.replace('$', 'p.'); // замена подстроки. с $ на р.
+        let sl = str4.slice(index, index + 5); // вырезает после индекса
+
+        console.log('has_str: ', has_str, 'index: ', index, 'sub: ', sub, 'repl: ', repl, 'slice: ', sl);
+
+        let sp = str4.split(' ');
+        console.log(sp);
+
+        let str55 = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis et sunt quibusdam eligendi exercitationem sed, tempora facere impedit quod eveniet vitae eos ipsum ab pariatur nesciunt cupiditate. Quidem, sunt voluptates?' + 
+        'Saepe voluptatum explicabo, soluta officia quae praesentium quasi, commodi aut qui nulla, amet architecto molestiae earum expedita quidem vel laboriosam harum eligendi. Id eos ullam quas, doloremque vitae ab distinctio.' +
+        'Qui at cumque, explicabo fuga excepturi illum nostrum quisquam iusto illo, tempora quam modi repellat repellendus? Dolorem nobis nemo ab corporis, a amet! Aspernatur consequatur, repudiandae illo modi eos praesentium.' + 
+        'Natus sed blanditiis aliquid illo officia atque qui sit, molestias omnis quae voluptas reiciendis dignissimos soluta beatae error perspiciatis aperiam itaque fuga animi quisquam nobis possimus. Ut nihil cumque velit!' +
+        'Saepe, omnis rerum. Vel culpa iusto adipisci atque aut at ut. Vel voluptates tempore tempora, dolorem iure deserunt tenetur perferendis dolor eveniet aliquam provident ea distinctio id fugit accusamus sequi!';
+
     </script>
 </body>
 </html>
