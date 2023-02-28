@@ -14,6 +14,17 @@
         placeat non cum reprehenderit quod nesciunt?
     </p>
 
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus provident quasi assumenda sunt sint perspiciatis. Beatae ullam minus est commodi dolore veniam ex! Libero, nostrum ratione cumque soluta voluptas recusandae?
+    Eaque sapiente dolores consequatur itaque quis quae deserunt? Dolores perferendis ipsum aut? Eaque ipsam, laborum fugit nobis, a corporis, vero magnam quod molestiae doloribus porro facilis vitae. At, tempora doloribus?
+    Mollitia fugiat sapiente vel repellendus reprehenderit repellat, rem perferendis voluptate sequi animi! Eos quas laudantium nulla perferendis assumenda dolor dolorem vero. Ipsum omnis atque obcaecati rem laboriosam ipsa quos nihil!
+    Odit delectus quibusdam vero impedit repudiandae magni, placeat, dolorem doloribus sed repellat iste modi suscipit nemo molestias aut commodi et ut eum veritatis recusandae, perspiciatis repellendus? Quo laborum exercitationem neque!
+    Sunt sint nam modi, maxime ad quidem esse, vel architecto quisquam molestiae, consequuntur officia nobis hic consectetur! Rem neque praesentium eaque incidunt itaque nam voluptates facilis repudiandae quia, explicabo est?
+    Tempora asperiores fugit fuga, officia quo doloremque tenetur quaerat possimus praesentium modi culpa iusto ad laboriosam similique sint consectetur labore esse non quam quae ut voluptas veniam incidunt repellat. Necessitatibus.
+    Vero voluptatem tenetur delectus fugit, exercitationem eligendi consequuntur quasi omnis, accusamus minima enim esse, alias doloribus deleniti illo autem itaque laborum dolorem minus! Ratione labore accusantium sapiente maxime, delectus placeat?
+    Velit ipsa ipsam doloremque architecto nostrum, error reprehenderit atque praesentium unde ut nemo deserunt labore harum dolore autem placeat modi, aperiam quae asperiores eveniet saepe accusantium dolorem, fuga quia! Facilis!
+    Quod sapiente, quas aut, sequi ratione nobis voluptatem animi facere amet maiores eligendi. Accusamus ratione itaque magnam nobis totam ullam consequuntur quidem esse facilis aperiam? Deserunt facere veniam eius dolores.
+    Rerum tempore doloremque, officia eius voluptatibus quasi, eligendi sint, cum nisi dolor nam ab minus! Earum fugiat ratione in labore eos ipsa iure quae numquam. Id voluptate facilis doloribus magni.
+
     <script>
         /*Comment*/
         // let a = confirm('Hello World!');
@@ -90,6 +101,11 @@
         let str4 = `${str1} product: ${price} ${str2}`;
         str4 += ' small';
 
+        let arr2 = [10, 11, 12, 13, 14, 15];
+        //          0,  1,  2,  3,  4,  5
+
+
+
         let str_len = str4.length; // длина строки
         let first_char = str4[0]; // первый симв.
         let last_char = str4[str4.length - 1]; // послед. симв.
@@ -101,17 +117,47 @@
         let repl = str4.replace('$', 'p.'); // замена подстроки. с $ на р.
         let sl = str4.slice(index, index + 5); // вырезает после индекса
 
-        console.log('has_str: ', has_str, 'index: ', index, 'sub: ', sub, 'repl: ', repl, 'slice: ', sl);
+        // console.log('has_str: ', has_str, 'index: ', index, 'sub: ', sub, 'repl: ', repl, 'slice: ', sl);
 
         let sp = str4.split(' ');
-        console.log(sp);
+        // console.log(sp);
 
         let str55 = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis et sunt quibusdam eligendi exercitationem sed, tempora facere impedit quod eveniet vitae eos ipsum ab pariatur nesciunt cupiditate. Quidem, sunt voluptates?' + 
-        'Saepe voluptatum explicabo, soluta officia quae praesentium quasi, commodi aut qui nulla, amet architecto molestiae earum expedita quidem vel laboriosam harum eligendi. Id eos ullam quas, doloremque vitae ab distinctio.' +
-        'Qui at cumque, explicabo fuga excepturi illum nostrum quisquam iusto illo, tempora quam modi repellat repellendus? Dolorem nobis nemo ab corporis, a amet! Aspernatur consequatur, repudiandae illo modi eos praesentium.' + 
+        'Saepe voluptatum explicabo, soluta officia quae praesentium quasi. Commodi aut qui nulla, amet architecto molestiae earum expedita quidem vel laboriosam harum eligendi. Id eos ullam quas, doloremque vitae ab distinctio.' +
+        'Qui at cumque, explicabo fuga excepturi illum. Nostrum quisquam iusto illo, tempora quam modi repellat repellendus? Dolorem nobis nemo ab corporis, a amet! Aspernatur consequatur, repudiandae illo modi eos praesentium.' + 
         'Natus sed blanditiis aliquid illo officia atque qui sit, molestias omnis quae voluptas reiciendis dignissimos soluta beatae error perspiciatis aperiam itaque fuga animi quisquam nobis possimus. Ut nihil cumque velit!' +
-        'Saepe, omnis rerum. Vel culpa iusto adipisci atque aut at ut. Vel voluptates tempore tempora, dolorem iure deserunt tenetur perferendis dolor eveniet aliquam provident ea distinctio id fugit accusamus sequi!';
+        'Saepe, omnis rerum.' + 
+        'Vel culpa iusto adipisci atque aut at ut. ' +
+        'Vel voluptates tempore tempora, dolorem iure deserunt tenetur perferendis dolor eveniet aliquam provident ea distinctio id fugit accusamus sequi!';
 
+         //1 задание
+        let predl = str55.replaceAll('u', '*');
+        // console.log('str1',str1);
+        // console.log( 'str1.predl',predl);
+
+        let task2_s = str55.split('.');
+        let task2_result = task2_s[0]; // первое предложение 
+        // console.log(task2_result); // task 2
+
+        let task3_s = str55.split('.'); // разбиваем на массив по разделителю(точке)
+        let task3_len = task3_s.length; // длина массива
+        let task3_result = task3_s[task3_len - 1]; // последний элемент в массиве
+        console.log('task3_result: ', task3_result);
+
+        // Task 4
+        let task4_s = str55.split('.');
+        let task4_len = task4_s.length;                         // длина массива
+        let task4_result_s = task4_s[task4_len - 2];            // предпоследний элемент в массиве
+        let tast4_words = task4_result_s.split(' ');            // предпосление предложение
+        let task4_result = tast4_words[tast4_words.length - 1]; // послений элемент в массиве
+        console.log('task4_result: ', task4_result);
+
+        // task 4
+        // let sp1 = str55.split('.');
+        // let len_sp1 = sp1.length;
+        // let p = sp1[sp1.length - 1];
+        // let words = p.split(' ');
+        // console.log(words[words.length - 1]);
     </script>
 </body>
 </html>
