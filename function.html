@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Функции</title>
+</head>
+<body>
+    <script>
+        // && - логическое И
+        // || - логическое ИЛИ
+        function hello(last_name, first_name, middle_name) {
+            let end_index = middle_name.length - 1; // последний симв.
+            let pre_end_index = end_index - 1; // пред последний симв.
+            let last_symbols = (middle_name[pre_end_index] + middle_name[end_index]).toUpperCase();  // окончание отчества
+
+            // let s = last_symbols.toLowerCase();
+
+            let gender;
+
+            if (last_symbols == 'ИЧ') {
+                gender = 'м';
+            } else if (last_symbols == 'ЛЫ') {
+                gender = 'м';
+            } else if (last_symbols == 'НА') {
+                gender = 'ж';
+            } else if (last_symbols == 'ЗЫ') {
+                gender = 'ж';
+            }
+
+            let date = new Date();
+
+            let month = date.getMonth();
+            let day = date.getDate();
+
+            if (month == 2 && day == 8 && gender == 'ж') {
+                alert('С 8 марта! ' + first_name);
+            }
+
+            // console.log(month, day, date.getHours(), date.getMinutes());
+
+
+
+
+
+
+
+
+
+
+
+
+            // let s = middle_name.substr(middle_name.length - 2, middle_name.middle_name).toUpperCase();
+            // let gender;
+
+            // if (s == 'ИЧ' || s == 'ЛЫ') {
+            //     gender = 'Man';
+            // } else if (s == 'НА' || s == 'ЗЫ') {
+            //     gender = 'Male';
+            // }
+
+            // alert('Hello ' + gender + '!');
+        }
+
+        hello('Нестеров', 'Василий', 'Борисович');
+        hello('Горбачёв', 'Альберт', 'Евгеньевич');
+        hello('Рябова', 'Анна', 'Александровна');
+    </script>
+</body>
+</html>
