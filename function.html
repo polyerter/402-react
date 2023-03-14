@@ -63,9 +63,126 @@
             // alert('Hello ' + gender + '!');
         }
 
-        hello('Нестеров', 'Василий', 'Борисович');
-        hello('Горбачёв', 'Альберт', 'Евгеньевич');
-        hello('Рябова', 'Анна', 'Александровна');
+        // hello('Нестеров', 'Василий', 'Борисович');
+        // hello('Горбачёв', 'Альберт', 'Евгеньевич');
+        // hello('Рябова', 'Анна', 'Александровна');
+
+
+
+
+
+
+        let a = 'Hello world!';
+
+        function scope(name, last_name, car = 'BMW', second_name) {
+            // let b = 'Lorem ipsum';
+            // alert(name);
+
+            if (second_name == undefined) {
+                second_name = 'Петрович';
+            }
+
+            console.log(
+                'name: ', name, 
+                'car: ', car, 
+                'last_name: ', last_name, 
+                'second_name: ', second_name
+            );
+        }
+
+        function gender(middle_name) {
+            let end_index = middle_name.length - 1; // последний симв.
+            let pre_end_index = end_index - 1; // пред последний симв.
+            let last_symbols = (middle_name[pre_end_index] + middle_name[end_index]).toUpperCase();  // окончание отчества
+
+            // let s = last_symbols.toLowerCase();
+
+            let gender = true;
+            if (last_symbols == 'ИЧ') {
+                gender = false; // м
+            } else if (last_symbols == 'ЛЫ') {
+                gender = false; // м
+            } else if (last_symbols == 'НА') {
+                gender = true; // ж
+            } else if (last_symbols == 'ЗЫ') {
+                gender = true; // ж
+            }
+            
+            return gender;
+        }
+
+        scope('Анна', 'Рябова');
+        scope('Альберт', 'Нестеров', 'Nissan');
+
+        function selectCar(middle_name) {
+            let car = 'BMW';
+            let g = gender(middle_name);
+
+            if (!g) {
+                car = 'Nissan';
+            }
+
+            return car;
+        }
+
+        console.log('selectCar: ', selectCar('Александрович'));
+
+        // let g = gender('Александрович');
+        // console.log('gender: ', g);
+
+
+
+        // let right = confirm('Верно?');
+        // console.log('rigth: ', right);
+
+
+
+        let f = function(text) {
+            console.log('text:', text);
+        };
+
+        // console.log(f);
+        // f('echo');
+
+        let arrowFunc = (a, b) => {
+            console.log(a + b);
+        }
+
+        arrowFunc(2, 8);
+
+        //            if(gender) { return 'BMW' } else { return 'Nissan' }
+        let userCar = (gender) => gender ? 'BWM' : 'Nissan';
+
+        console.log('userCar: ', userCar());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 </body>
 </html>
